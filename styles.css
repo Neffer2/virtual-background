@@ -1,0 +1,76 @@
+html {
+    height: 100% !important;
+}
+
+body {
+    height: 100%;
+    background-image: url("assets/images/fondo-2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+canvas {
+    height: 100% !important;
+}
+
+#webar {
+    margin-top: 50px;
+    margin-bottom: .5rem;
+    width: 95%;
+    height: 250px;
+    background-color: #000000;
+    border: 3px white solid;
+}
+
+#webcam:hover {
+    height: 170px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.menu-scene {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+.webcam-scene {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logos{
+    height: 3rem;
+    width: 100%;
+    padding: 0 2.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.banner {
+    margin: .5rem 0;
+    padding: 0 5rem;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+.miniaturas {
+    margin: .5rem 0;
+    padding: 0 8%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;    
+    flex-wrap: wrap;
+    gap: 5px;
+}
