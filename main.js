@@ -20,6 +20,9 @@ const testRulerBlock = document.querySelector('.test-ruler')
 
 let menuScene = document.getElementById('menu-scene')
 let webcamScene = document.getElementById('webcam-scene')
+let mainBody = document.getElementById('main-body')
+let screenshotBtn = document.getElementById('screen-shot');
+
 
 let selectedCategoryInput
 let selectedEffect
@@ -110,7 +113,6 @@ const addEffectControlHandler = (control) => {
 
 }
 
-
 const startEffect = () => {
   selectedEffect = 'Background_change.zip'
   const effectPath = 'assets/effects/'
@@ -160,6 +162,8 @@ const onWebcamSelect = (e) => {
 
   webcamScene.setAttribute("class", "webcam-scene")
   menuScene.setAttribute("class", "hidden")
+  mainBody.style.background = "url('assets/images/back2.jpg') no-repeat"
+  mainBody.style.backgroundSize = "cover"
 };
 
 enablePlay()
@@ -170,4 +174,10 @@ function enablePlay (){
   webcamSourceButton.style.pointerEvents = "all";
 }
 
+async function takeScreenshot (){
+  const url = URL.createObjectURL(await getScreenshot())
+  console.log("blob:http://"+url);
+}
+
 webcamSourceButton.addEventListener('click', onWebcamSelect)
+screenshotBtn.addEventListener('click', takeScreenshot);
